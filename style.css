@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Patrick+Hand&display=swap');
+
+:root {
+    --background: #c4dabb;
+    --paper: #f7f6ef;
+    --forest: #20382a;
+    --text: #182019;
+    --text-line: #667168;
+    --accent: rgb(96, 136, 83);
+    --accent-light: #f0b08f;
+    --line: #9eaa9f;
+    --shadow: rgba(24, 32, 25, 0.15);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+
+    background-image: radial-gradient(rgba(32,56,42,0.12) 1px, transparent 1px);
+
+    background-size: 22px 22px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1100px, 90%);
+    padding: 1rem 1.4rem;
+    background: rgba(247, 246, 239, 0.92);
+    border: 2px solid var(--forest);
+    border-radius: 14px;
+    box-shadow: 5px 5px 0 var(--forest);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+}
+
+.logo{
+    font-family: 'DM Mono', monospace;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--forest);  
+    transition: 0.5s;
+}
+
+.logo:before {
+    content: '>';
+    color: var(--accent-light);
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.2rem;
+    color: var(--forest);
+    padding: 0.4rem 0.7rem;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+nav a:hover, nav a.active{
+    background: var(--accent-light);
+    border: 1px solid var(--forest);
+
+    transform: rotate(-2 deg);
+}
+
+
+.home {
+   position: relative;
+    width: min(1100px, 90%);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 160px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  
+.home-img  {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-img::before{
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 25px;
+    background: rgba(239, 196, 142, 0.8);
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-4deg);
+    z-index: 2;
+
+
+}
+
+
+.home-img img {
+    width: 330px;
+    height: 380px;
+    object-fit: cover;
+    border: 8px solid var(--paper);
+    box-shadow: 8px 8px 0 var(--forest), 0 12px 30px var(--shadow);
+    transform: rotate(-3deg);
+    transition: 0.3s ease;
+}
+
+.home-img img:hover {
+    transform: rotate(1deg) scale(1.03);
+}
+
+.home-img:after {
+    content: "^ This is me, designed using picrew! :)";
+    position: absolute;
+    bottom: -45px;
+    right: 5px;
+    font-family: "Patrick Hand", cursive;
+    font-size: 1.4rem;
+    color: var(--forest);
+    transform: rotate(-5deg);
+
+}
+
+.home-content {
+    position:relative;
+}
+
+.home-content:before {
+    content:"// Computer Science Student at the University of Nottingham!";
+    display: block;
+    margin-bottom: 0.8rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.home-content h1{
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    margin-bottom: 1.5rem;
+    color: var(--forest);
+}
+
+.home-content h1 span{
+    color: var(--accent);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.social-icons .link a {
+    background: var(--forest);
+    color: white;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--forest);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6rem;
+    transition: 0.2s ease;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+
+}
+
+.social-icons .link a:hover {
+    background: var(--accent);
+    transform: translateY(-4px) rotate(-2deg);
+    box-shadow: 4px 4px 0 var(--forest);
+}
+
+
+.social-icons i {
+    font-size: 20px !important;
+}
+
+
+.info-box {
+   position: relative;
+   background: var(--paper);
+   border: 2px solid var(--forest);
+   padding: 2rem;
+   margin: 2rem 0;
+   box-shadow: 7px 7px 0 var(--forest);
+   transform: rotate(1deg);
+}
+
+.info-box:before{
+    content: "about_me.txt";
+    display: block;
+    margin: -2rem -2rem 2rem -2rem;
+    padding: 0.5rem 1rem;
+    background: var(--forest);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+}
+
+.info-box:after{
+    content: "x";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+}
+  
+.info-box h3 {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+.info-box p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.home-content h4{
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-family: 'DM Mono', monospace;
+    color: var(--forest);
+}
+
+.home-content > p {
+    margin-bottom: 1rem;
+    padding: 1rem 1.2rem;
+    background: rgba(247, 246, 239, 0.7);
+    border-left: 4px solid var(--accent);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+.home-content:after {
+    content: "status: debugging...";
+    position: absolute;
+    right: -30px;
+    top: -40px;
+    padding: 0.5rem 0.8rem;
+    background: var(--accent-light);
+    border: 1px solid var(--forest);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    transform: rotate(4deg);
+    box-shadow: 3px 3px 0 var(--forest);
+}
