@@ -281,7 +281,7 @@ nav a:hover, nav a.active{
 
 
 .home-content:after {
-    content: "status: debugging...";
+    content: "thank you for looking at my wesbite! :)";
     position: absolute;
     right: -30px;
     top: -40px;
@@ -292,4 +292,210 @@ nav a:hover, nav a.active{
     font-size: 0.7rem;
     transform: rotate(4deg);
     box-shadow: 3px 3px 0 var(--forest);
+}
+
+
+.projects-page {
+    min-height: 100vh;
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+
+.projects {
+    width: min(1100px,  90%);
+    margin: 0 auto;
+}
+
+.projects-heading {
+    max-width: 700px;
+    margin-bottom: 4rem;
+}
+
+.projects-heading h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1;
+    letter-spacing: -3px;
+    color: var(--forest);
+    margin-bottom: 1.5rem;
+}
+
+.projects-heading h1 span {
+    color: var(--accent);
+}
+
+.projects-intro {
+    max-width: 600px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-line);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    position: relative;
+    background: var(--paper);
+    border: 2px solid var(--forest);
+    box-shadow: 7px 7px 0 var(--forest);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    overflow: hidden;
+}
+
+
+.project-card:nth-child(2) {
+    transform: rotate(1deg);
+}
+
+.project-card:nth-child(3) {
+    transform: rotate(-1deg);
+}
+
+.project-card:nth-child(4) {
+    transform: rotate(1.5deg);
+}
+
+.project-card:hover{
+    transform: translate(-4px, -6px) rotate(0deg);
+    box-shadow: 12px 12px 0 var(--accent);
+}
+
+.window-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    background: var(--forest);
+    color: var(--paper);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+}
+
+.window-button{
+    display: flex;
+    gap: 5px;
+}
+
+.window-button i {
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--paper);
+}
+
+.project-card:hover .window-button i:nth-child(1) {
+    background: var(--accent);
+}
+
+.project-card:hover .window-button i:nth-child(2) {
+    background: var(--accent-light);
+}
+
+.project-content {
+    position: relative;
+    padding: 2rem;
+}
+
+.project-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.project-content h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: var(--forest);
+}
+
+
+.project-content p {
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 0.9rem;
+    min-height: 100px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-tags span {
+    padding: 0.3rem 0.5rem;
+    border: 1px solid var(--forest);
+    color: var(--forest);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    background: var(--shadow);
+    transition: 0.2s ease;
+}
+
+.project-card:hover .project-tags span {
+    background: var(--accent-light);
+    transform: translate(-2px);
+}
+
+
+.project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--line);
+}
+
+.status {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.2rem;
+    color: var(--accent);
+}
+
+.project-link {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.2rem;
+    color: var(--forest);
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+
+.project-link:hover {
+    color: var(--accent);
+    transform: translate(5px);
+}
+
+@media (max-width: 800px) {
+
+    .projects-page {
+        padding-top: 120px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .project-card:nth-child(n) {
+        transform: rotate(0deg);
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .projects-heading h1 {
+        font-size: 3.5rem;
+    }
+
 }
