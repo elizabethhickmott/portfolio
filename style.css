@@ -557,3 +557,79 @@ nav a:hover, nav a.active{
     margin-bottom: 1rem;
     color: var(--text);
 }
+
+
+.profile-section {
+    margin-bottom: 7rem;
+}
+
+.profile-card {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: 5%;
+    background: var(--paper);
+    border: 2px solid var(--forest);
+    box-shadow: 7px 7px 0 var(--accent);
+    transform: rotate(1deg);
+}
+
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 0.7rem;
+    background: var(--shadow);
+    border-bottom: 2px solid var(--forest);
+    font-family: 'DM Mono', monospace;
+    font-size: 1rem;
+}
+
+.profile-content {
+    padding: 2rem;
+}
+
+
+.profile-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px dashed var(--line);
+    font-family: 'DM Mono', monospace;
+    font-size: 1rem;
+}
+
+.profile-row span {
+    color: var(--text-line);
+}
+
+.profile-row strong {
+    color: var(--forest);
+}
+
+.profile-row .online {
+    color: var(--accent);
+}
+
+
+.profile-divider {
+    height: 1rem;
+}
+
+.profile-row.skills {
+    border-bottom: none;
+}
+
+
+.profile-row.skills div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.profile-row.skills div span {
+    padding: 0.4rem 0.6rem;
+    background: var(--accent-light);
+    border: 1px solid var(--forest);
+    color: var(--forest);
+}
