@@ -24,7 +24,7 @@ html {
     scroll-behavior: smooth;
 }
 
-
+/* website.html */
 body {
     min-height: 100vh;
     overflow-x: hidden;
@@ -294,7 +294,7 @@ nav a:hover, nav a.active{
     box-shadow: 3px 3px 0 var(--forest);
 }
 
-
+/* projects.html */
 .projects-page {
     min-height: 100vh;
     padding-top: 150px;
@@ -500,7 +500,7 @@ nav a:hover, nav a.active{
 
 }
 
-
+/* about.html */
 .about-page {
     width: min(1100px, 90%);
     margin: 0 auto;
