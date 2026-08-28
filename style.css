@@ -701,3 +701,49 @@ nav a:hover, nav a.active{
     color: var(--text);
     line-height: 1.5;
 }
+
+.like-section {
+    margin-bottom: 10rem;
+}
+
+
+.likes {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.like-card {
+    padding: 1.5rem;
+    background: var(--paper);
+    border: 2px solid var(--forest);
+    transition: 0.2s ease;
+}
+
+
+.like-card:nth-child(2) {
+    transform: rotate(1deg);
+}
+
+.like-card:nth-child(4) {
+    transform: rotate(-1deg);
+}
+
+.like-card:hover {
+    transform: translateY(-6px) rotate(0deg);
+    box-shadow: 5px 5px 0 var(--accent);
+}
+
+.like-card h3 {
+    margin-top: 0.5rem;
+    color: var(--forest);
+}
+
+
+.like-card p {
+    margin-top: 0.5rem;
+    color: var(--text);
+    line-height: 1.5rem;
+    font-size: 1rem;
+}
