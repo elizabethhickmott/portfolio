@@ -32,10 +32,8 @@ body {
     background: var(--background);
     color: var(--text);
     font-family: 'Inter', sans-serif;
-
-    background-image: radial-gradient(rgba(32,56,42,0.12) 1px, transparent 1px);
-
-    background-size: 22px 22px;
+    background-image: linear-gradient(#a8bf9f 1px, transparent 1px), linear-gradient(to right, #a8bf9f 1px,var(--background) 1px);
+    background-size: 20px 20px;
 }
 
 a {
@@ -402,6 +400,21 @@ nav a:hover, nav a.active{
     padding: 2rem;
 }
 
+.project-photo {
+    max-height: 500px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .project-num {
     font-family: 'DM Mono', monospace;
     font-size: 1.5rem;
@@ -516,7 +529,7 @@ nav a:hover, nav a.active{
 
 .about-heading .terminal-label {
     margin-bottom: 1rem;
-    color: var(--accent);
+   
 }
 
 .about-heading h1 {
@@ -547,11 +560,6 @@ nav a:hover, nav a.active{
     font-size: 1rem;
 }
 
-.about-txt h2 {
-    line-height: 1.8;
-    margin-bottom: 1rem;
-    color: var(--text);
-}
 
 .about-txt p {
     line-height: 1.8;
