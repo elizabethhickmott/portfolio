@@ -1041,3 +1041,22 @@ nav a:hover, nav a.active{
     object-position: center;
     display: block;
 }
+
+
+@media (max-width: 700px) {
+    .links-grid {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+    .links-window {
+        transform: none;
+    }
+
+    .note {
+        position: relative;
+        right: auto;
+        top: 40px;
+        margin: 0 auto;
+    }
+}
